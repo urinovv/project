@@ -1,0 +1,10 @@
+.app-footer {
+    width: 100vw;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.txt-icon {
+    color: #C1C1C1;
+    cursor: pointer;
+}

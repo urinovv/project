@@ -1,0 +1,28 @@
+.reviews {
+    width: 100vw;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.reviews-container {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 2rem 1.5rem 4rem 1.5rem;
+    width: 90%;
+    border-radius: 1rem;
+}
+.reviews-header {
+    margin: 0;
+}
+.customers {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 50%;
+    cursor: pointer;
+}
+.horizontal-line {
+    margin: 0;
+    width: 75%;
+}
+.star-reviews {
+    cursor: pointer;
+}

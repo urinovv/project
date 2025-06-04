@@ -1,0 +1,38 @@
+.latest-posts {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 100vh;
+}
+.latest-container {
+    width: 90%;
+    cursor: pointer;
+}
+.latest-posts-container {
+    width: 90%;
+}
+.posts-content-image img {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.posts-content-image img:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: 0.3s;
+}
+.read-more-btn {
+    display: flex;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.read-more-texts {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.content-image-type {
+    display: flex;
+    font-size: 10px;
+}

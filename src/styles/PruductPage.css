@@ -1,0 +1,85 @@
+.pruduct-page {
+    width: 100vw;
+    height: auto;
+}
+.pruduct-page-container {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.pruducts-container {
+    width: 90%;
+    height: auto;
+}
+.image-left img {
+    padding: 1rem;
+    width: 100px;
+    height: auto;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.image-right img {
+    padding: 1rem;
+    cursor: pointer;
+}
+.image-left img:hover {
+    border-color: orange;
+}
+.image-right {
+    width: 80%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+.image-right img:hover {
+    scale: 1.01;
+    transition: 0.3s;
+}
+.counter-btn {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+.users-image {
+    border-radius: 50%;
+    border: none;
+}
+.add-review-container {
+    position: relative;
+}
+.add-review-container input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.add-name-container input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+.add-email-container input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+.your-rating {
+    color: rgba(0, 0, 0, 0.3);
+}
+.your-rating:hover {
+    color: #FF6543;
+    cursor: pointer;
+}
+.input-field-container {
+    width: 80%;
+}

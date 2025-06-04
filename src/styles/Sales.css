@@ -1,0 +1,13 @@
+.sales {
+    width: 100vw;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.1);
+}
+.sales-container {
+    width: 90vw;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+}

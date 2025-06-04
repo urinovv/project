@@ -1,0 +1,43 @@
+.brands {
+    width: 100vw;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.brands-container {
+    width: 90%;
+    height: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 4rem 3rem 4rem 3rem;
+    border-radius: 1rem;
+    border: none;
+}
+.brands-title, .lighter {
+    color: #C1C1C1;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.brands-title-2 {
+    font-family: Jost, serif;
+    letter-spacing: 1px;
+    color: #C1C1C1;
+    cursor: pointer;
+}
+.brands-title-3 {
+    font-family: Inter, serif;
+    letter-spacing: 1px;
+    color: #C1C1C1;
+    cursor: pointer;
+}
+.brands-title-4 {
+    font-family: Syne, serif;
+    letter-spacing: 1px;
+    color: #C1C1C1;
+    cursor: pointer;
+}
+.brands-title-5 {
+    font-family: Lora, serif;
+    letter-spacing: 1px;
+    color: #C1C1C1;
+    cursor: pointer;
+}

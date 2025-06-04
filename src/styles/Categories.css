@@ -1,0 +1,25 @@
+.categories {
+    width: 100vw;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+hr {
+    display: flex;
+    width: 80vw;
+    height: 8px;
+    border: 2px solid black;
+}
+.c-items {
+    display: flex;
+    width: 190px;
+    height: 230px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.c-items:hover {
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.5s;
+    border: none;
+}
