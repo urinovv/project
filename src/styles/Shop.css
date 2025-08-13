@@ -12,14 +12,9 @@
     height: auto;
 }
 .items-filter-search {
-    border: 2px solid rgba(0, 0, 0, 0.2);
     padding: 0.5rem;
     border-radius: 1rem;
-}
-.items-filter-search:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-color: transparent;
-    transition: 0.3s;
 }
 .items-filter-search label img {
     cursor: pointer;
@@ -66,14 +61,13 @@
 }
 .shop-item {
     width: 22%;
-    height: 250px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    height: 300px;
     border-radius: 1rem;
-
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .shop-item:hover {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border: none;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    scale: 1.01;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -85,4 +79,11 @@
     font-size: 0.8rem;
     color: #FF6543;
     margin: 0;
+}
+.hidden {
+    display: none !important;
+}
+.d-menu {
+    backdrop-filter: blur(50px);
+    border: none;
 }

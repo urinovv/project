@@ -1,68 +1,86 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Reviews.css';
 import leftArrow from '../assets/icons/left arrow.svg';
 import rightArrow from '../assets/icons/right arrow.svg';
 import StarIcon from '@mui/icons-material/Star';
 
-function Reviews(props) {
+const reviews = [
+    {
+        name: 'Emma Chamberlin',
+        text: `“I stumbled upon this tech store while searching for a new laptop, and I couldn't be happier with my experience! The staff was incredibly knowledgeable and guided me through the process of choosing the perfect device for my needs. Highly recommended!”`
+    },
+    {
+        name: 'Thomas John',
+        text: `“This tech store is my go-to for all things tech! Whether it's a new smartphone, accessories, or even troubleshooting advice, they've always got me covered. The staff is friendly, and their expertise is unmatched. Trust me; you won't regret shopping here!”`
+    },
+    {
+        name: 'Kevin Bryan',
+        text: `“I recently purchased a smartwatch from this tech store, and I'm absolutely thrilled with my purchase! Not only did they have an extensive selection to choose from, but their team helped me find the perfect fit for my lifestyle.”`
+    },
+    {
+        name: 'Sarah Newton',
+        text: `“Fantastic experience from start to finish. The team is professional and they genuinely care about their customers. Will definitely return for future purchases!”`
+    },
+    {
+        name: 'Liam Brown',
+        text: `“Quick service, great products and friendly staff. Found exactly what I needed without wasting time.”`
+    },
+    {
+        name: 'Olivia Davis',
+        text: `“The most helpful tech staff I’ve ever met. They fixed my issue within minutes!”`
+    }
+];
+
+function Reviews() {
+    const [index, setIndex] = useState(0);
+    const visibleCount = 3;
+    const total = reviews.length;
+
+    const next = () => {
+        setIndex((prev) => (prev + visibleCount) % total);
+    };
+
+    const prev = () => {
+        setIndex((prev) => (prev - visibleCount + total) % total);
+    };
+
+    // ✅ Auto-play effect
+    useEffect(() => {
+        const interval = setInterval(() => {
+            next();
+        }, 5000); // 5 seconds
+        return () => clearInterval(interval);
+    }, []);
+
+    const visibleReviews = [
+        reviews[(index + 0) % total],
+        reviews[(index + 1) % total],
+        reviews[(index + 2) % total]
+    ];
+
     return (
-        <section className="reviews d-flex flex-column justify-content-start align-items-center">
-            <div className="reviews-container d-flex flex-column align-items-center justify-content-center gap-5">
-                <div className="header-container d-flex flex-row align-items-center justify-content-center gap-3 w-100">
-                    <h1 className="reviews-header d-flex fs-3 w-25">CUSTOMERS REVIEWS</h1>
-                    <hr className={"horizontal-line"}/>
+        <section className="reviews-section d-flex flex-column align-items-center">
+            <div className="title-line d-flex align-items-center gap-3 justify-content-center mb-4">
+                <h2 className="fs-3 m-0 w-50 mb-4">CUSTOMERS REVIEWS</h2>
+                <hr className="flex-grow-1" style={{ borderTop: '1px solid #ccc' }} />
+            </div>
+
+            <div className="reviews-wrapper d-flex flex-row align-items-center justify-content-center gap-4 position-relative">
+                <img src={leftArrow} alt="left" className="arrow" onClick={prev} />
+                <div className="reviews-track d-flex">
+                    {visibleReviews.map((review, i) => (
+                        <div key={i} className="review-card d-flex flex-column justify-content-between">
+                            <p className="review-text">{review.text}</p>
+                            <div className="stars d-flex gap-1 text-warning">
+                                {[...Array(5)].map((_, idx) => (
+                                    <StarIcon key={idx} fontSize="small" />
+                                ))}
+                            </div>
+                            <h5 className="fw-bold reviewer-name">{review.name}</h5>
+                        </div>
+                    ))}
                 </div>
-                <div
-                    className="customers-container d-flex flex-row align-items-center justify-content-center w-100 gap-4">
-                    <img className={"arrows"} src={leftArrow} alt="left arrow"/>
-                    <div className="customers-container d-flex flex-row align-items-center justify-content-center gap-3">
-                        <div className="customers d-flex flex-column align-items-start justify-content-center gap-2">
-                            <p className="customers-reviews">“I stumbled upon this tech store while searching for a new
-                                laptop,
-                                and I couldn't be happier with my experience! The staff was incredibly knowledgeable and
-                                guided
-                                me through the process of choosing the perfect device for my needs. Highly
-                                recommended!”</p>
-                            <div className="gave-stars d-flex flex-row align-items-center justify-content-center gap-1 text-warning">
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                            </div>
-                            <h1 className="customers-names d-flex fs-5 fw-bolder">Emma Chamberlin</h1>
-                        </div>
-                        <div className="customers d-flex flex-column align-items-start justify-content-center gap-2">
-                            <p className="customers-reviews">“This tech store is my go-to for all things tech! Whether
-                                it's a new smartphone, accessories, or even troubleshooting advice,
-                                they've always got me covered. The staff is friendly, and their expertise is unmatched.
-                                Trust me; you won't regret shopping here!”</p>
-                            <div className="gave-stars d-flex flex-row align-items-center justify-content-center gap-1 text-warning">
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                            </div>
-                            <h1 className="customers-names d-flex fs-5 fw-bold">Thomas John</h1>
-                        </div>
-                        <div className="customers d-flex flex-column align-items-start justify-content-center gap-2">
-                            <p className="customers-reviews">“I recently purchased a smartwatch from this tech store,
-                                and I'm absolutely thrilled with my purchase!
-                                Not only did they have an extensive selection to choose from,
-                                but their team helped me find the perfect fit for my lifestyle.”</p>
-                            <div className="gave-stars d-flex flex-row align-items-center justify-content-center gap-1 text-warning">
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                                <StarIcon className={"d-flex star-reviews"}/>
-                            </div>
-                            <h1 className="customers-names d-flex fs-5 fw-bold">Kevin Bryan</h1>
-                        </div>
-                    </div>
-                    <img className={"arrows"} src={rightArrow} alt="right arrow"/>
-                </div>
+                <img src={rightArrow} alt="right" className="arrow" onClick={next} />
             </div>
         </section>
     );

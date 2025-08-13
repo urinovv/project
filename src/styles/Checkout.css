@@ -13,11 +13,17 @@
     width: 100%;
     height: auto;
     padding: 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: none;
     border-radius: 0.6rem;
     outline: none;
     background-color: transparent;
     margin-bottom: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+.checkout-forms input:hover {
+    box-shadow: rgba(149, 157, 165, 0.6) 0 8px 24px;
+    transform: scale(1.01);
+    transition: 0.2s;
 }
 .checkout-forms label {
     margin: 0;

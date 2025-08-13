@@ -12,6 +12,7 @@ import LatestPosts from "../components/LatestPosts";
 import InstaShoplite from "../components/InstaShoplite";
 import Brands from "../components/Brands";
 import Footer from "../components/Footer";
+import Comments from "../components/Comments";
 
 function BlogPost8(props) {
     return (
@@ -93,101 +94,22 @@ function BlogPost8(props) {
                     </div>
                     <div
                         className={"posts-pagination d-flex flex-row align-items-center justify-content-between w-100 p-3"}>
-                        <NavLink to={`/blogs/Top Apps and Tools for Remote Work(2)`} className={"text-decoration-none text-dark"}>
+                        <NavLink to={`/blogs/Top Apps and Tools for Remote Work(2)`}
+                                 className={"text-decoration-none text-dark"}>
                             <p className={"fs-5 text-uppercase"}>◀ Prev</p>
                         </NavLink>
-                        <NavLink to={`/blogs/Eco-Friendly Innovations Making a Difference(2)`} className={"text-decoration-none text-dark"}>
+                        <NavLink to={`/blogs/Eco-Friendly Innovations Making a Difference(2)`}
+                                 className={"text-decoration-none text-dark"}>
                             <p className={"fs-5 text-uppercase"}>Next ▶</p>
                         </NavLink>
                     </div>
-                    <div
-                        className={"posts-comments-container d-flex flex-column align-items-start justify-content-center w-100 gap-4 m-xl-5"}>
-                        <h1 className={"fs-3 fw-light"}>3 COMMENTS</h1>
-                        <div
-                            className={"d-flex flex-row align-items-start justify-content-center w-100 gap-3"}>
-                            <img src="" alt="user" width={"150px"} height={"150px"}
-                                 className={"users-image"}/>
-                            <div
-                                className={"d-flex flex-column align-items-start justify-content-center w-100"}>
-                                <div
-                                    className={"d-flex flex-row align-items-center justify-content-center gap-2"}>
-                                    <h1 className={"d-flex fs-4 m-0"}>Thompson J.</h1>
-                                    <p className={"d-flex fs-5 m-0 fw-light"}> — Jul 10</p>
-                                </div>
-                                <p>
-                                    Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor.
-                                    Porta ut diam lobortis eget leo, lectus. Tortor diam dignissim amet, in interdum
-                                    aliquet. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec,
-                                    rutrum a diam lacus, nunc integer etiam.
-                                </p>
-                                <button className={"btn bg-transparent text-warning p-0 m-0"}>Reply now</button>
-                            </div>
-                        </div>
 
-                        <div
-                            className={"d-flex flex-row align-items-start justify-content-center w-75 gap-3 mx-lg-5"}>
-                            <img src="" alt="user" width={"150px"} height={"150px"}
-                                 className={"users-image"}/>
-                            <div
-                                className={"d-flex flex-column align-items-start justify-content-center w-100"}>
-                                <div
-                                    className={"d-flex flex-row align-items-center justify-content-center gap-2"}>
-                                    <h1 className={"d-flex fs-4 m-0"}>Thompson J.</h1>
-                                    <p className={"d-flex fs-5 m-0 fw-light"}> — Jul 10</p>
-                                </div>
-                                <p>
-                                    Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor.
-                                    Porta ut diam lobortis eget leo, lectus. Tortor diam dignissim amet, in interdum
-                                    aliquet. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec,
-                                    rutrum a diam lacus, nunc integer etiam.
-                                </p>
-                                <button className={"btn bg-transparent text-warning p-0 m-0"}>Reply now</button>
-                            </div>
-                        </div>
-
-                        <div
-                            className={"d-flex flex-row align-items-start justify-content-center w-100 gap-3"}>
-                            <img src="" alt="user" width={"150px"} height={"150px"}
-                                 className={"users-image"}/>
-                            <div
-                                className={"d-flex flex-column align-items-start justify-content-center w-100"}>
-                                <div
-                                    className={"d-flex flex-row align-items-center justify-content-center gap-2"}>
-                                    <h1 className={"d-flex fs-4 m-0"}>Thompson J.</h1>
-                                    <p className={"d-flex fs-5 m-0 fw-light"}> — 11/22/2022</p>
-                                </div>
-                                <p>
-                                    Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor.
-                                    Porta ut diam lobortis eget leo, lectus. Tortor diam dignissim amet, in interdum
-                                    aliquet. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec,
-                                    rutrum a diam lacus, nunc integer etiam.
-                                </p>
-                                <button className={"btn bg-transparent text-warning p-0 m-0"}>Reply now</button>
-                            </div>
-                        </div>
-
-                        <form className={"write-a-comment d-flex flex-column gap-2 w-75 m-xl-4"}>
-                            <h1 className={"fs-3 fw-light text-uppercase"}>Leave a Comment</h1>
-                            <p>Your email address will not be published. Required fields are marked *</p>
-                            <input className={"leave-comment w-100"} type="text"
-                                   placeholder={"Write your comment here *"} required/>
-                            <div className={"d-flex flex-row w-100 gap-2"}>
-                                <input className={"leave-comment w-50"} type="text"
-                                       placeholder={"Write your name here *"} required/>
-                                <input className={"leave-comment w-50"} type="email"
-                                       placeholder={"Write your email here *"} required/>
-                            </div>
-                            <div className={"d-flex flex-row align-items-center justify-content-start gap-1 w-100"}>
-                                <input type="checkbox" id={"checkbox"} required/>
-                                <label htmlFor={"checkbox"}>Save my name, email, and website in this browser for the
-                                    next time.</label>
-                            </div>
-                            <button type={"submit"} className={"btn btn-warning text-white text-uppercase w-25"}>Post
-                                Comment
-                            </button>
-                        </form>
-
+                    <div className={"d-flex flex-column w-100"}>
+                        <hr/>
+                        <Comments/>
+                        <hr/>
                     </div>
+
                 </div>
             </div>
             <LatestPosts/>

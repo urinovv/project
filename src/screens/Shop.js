@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/Shop.css';
 import Reviews from '../components/Reviews';
 import LatestPosts from "../components/LatestPosts";
@@ -6,21 +6,15 @@ import Brands from "../components/Brands";
 import InstaShoplite from "../components/InstaShoplite";
 import Footer from "../components/Footer";
 import searchIcon from '../assets/icons/search.svg';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "reactstrap";
-import iPad from '../assets/images/ipad.png';
-import drone from '../assets/images/drone.png';
-import appleWatch from '../assets/images/applewatch.png';
-import tv from '../assets/images/tv.png';
-import headPhones from '../assets/images/headphones.png';
-import speaker from '../assets/images/speaker-2.png';
-import bluetoothSpeaker from '../assets/images/speaker.png';
-import airPods from '../assets/images/airpods.png';
-import macbookUltra from '../assets/images/macbook.png';
-import iPhone15ProMax from '../assets/images/iPhone-15-pro.png';
-import smartWatch from '../assets/images/smartwatch.png';
+import products from "../Products/mockProducts";
 
 function Shop(props) {
+
+    const [ setSelectedPriceRange, setSelectedTagRange] = useState(null);
+
+
     return (
         <section className="shop d-flex flex-column align-items-center justify-content-center">
             <div className="shop-container d-flex flex-column justify-content-center align-items-center gap-5 p-5">
@@ -34,7 +28,8 @@ function Shop(props) {
                 </div>
 
                 <div className="shop-container-items d-flex flex-row align-items-start justify-content-center">
-                    <div className="shop-item-container-left d-flex flex-column align-items-center justify-content-center w-75">
+                    <div
+                        className="shop-item-container-left d-flex flex-column align-items-center justify-content-center w-75">
                         <div className="items-filter d-flex flex-row align-items-center justify-content-between w-100">
                             <p className={"d-flex m-0"}>Showing 1-9 of 55 results</p>
 
@@ -45,96 +40,49 @@ function Shop(props) {
                                     className={"bg-transparent"}>
                                     Default sorting
                                 </DropdownToggle>
-                                <DropdownMenu dark className={"top-100"}>
-                                    <DropdownItem>
-                                        Action
+                                <DropdownMenu className={"top-100 bg-transparent d-menu"}>
+                                    <DropdownItem onClick={() => setSelectedPriceRange('all')}>
+                                        All
                                     </DropdownItem>
-                                    <DropdownItem>
-                                        Action
+                                    <DropdownItem onClick={() => setSelectedPriceRange('lt10')}>
+                                        Less than $10
                                     </DropdownItem>
-                                    <DropdownItem>
-                                        Action
+                                    <DropdownItem onClick={() => setSelectedPriceRange('lt100')}>
+                                        Less than $100
+                                    </DropdownItem>
+                                    <DropdownItem onClick={() => setSelectedPriceRange('lt500')}>
+                                        Less than $500
+                                    </DropdownItem>
+                                    <DropdownItem onClick={() => setSelectedPriceRange('lt1000')}>
+                                        Less than $1000
+                                    </DropdownItem>
+                                    <DropdownItem onClick={() => setSelectedPriceRange('lt10000')}>
+                                        Less than $10000
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
 
                         </div>
-                        <div className="shop-items d-flex flex-row flex-wrap align-items-center justify-content-center w-100 gap-4">
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={iPad} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>iPad (9th Gen)</h1>
-                                <p className="shop-item-price m-0">$870</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={drone} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Drone With Camera</h1>
-                                <p className="shop-item-price">$600</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={appleWatch} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Apple Watch (2nd Gen)</h1>
-                                <p className="shop-item-price">$400</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={tv} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Ultra HD TV</h1>
-                                <p className="shop-item-price">$2000</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={headPhones} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Headphones </h1>
-                                <p className="shop-item-price">$600</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={appleWatch} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Apple Watch (2nd Gen)</h1>
-                                <p className="shop-item-price">$400</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={speaker} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Speaker</h1>
-                                <p className="shop-item-price">$2000</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={bluetoothSpeaker} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Bluetooth Speaker</h1>
-                                <p className="shop-item-price">$75</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={airPods} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>AirPods</h1>
-                                <p className="shop-item-price">$600</p>
-                            </div>
-
-                            <div className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={macbookUltra} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>MacbookUltra</h1>
-                                <p className="shop-item-price">$400</p>
-                            </div>
-
-                                <div
-                                    className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                    <NavLink to={`/pruduct-page`} className={"w-100 h-100 text-decoration-none text-dark d-flex flex-column align-items-center justify-content-between"}>
-                                    <img src={iPhone15ProMax} alt="item" width={"90%"} height={"auto"}/>
-                                    <h1 className={"shop-item-title"}>iPHONE 15 PRO MAX</h1>
-                                    <p className="shop-item-price">$2000</p>
-                                    </NavLink>
-                                </div>
+                        <div
+                            className="shop-items d-flex flex-row flex-wrap align-items-center justify-content-center w-100 gap-4"
+                            id={"productList"}>
 
                             <div
-                                className="shop-item d-flex flex-column align-items-center justify-content-between h6 gap-2 p-2">
-                                <img src={smartWatch} alt="item" width={"90%"} height={"auto"}/>
-                                <h1 className={"shop-item-title"}>Smart Watch</h1>
-                                <p className="shop-item-price">$75</p>
+                                className="shop-items d-flex flex-row flex-wrap align-items-center justify-content-center w-100 gap-4"
+                                id="productList">
+                                {products.map((item) => (
+                                    <li key={item.id}
+                                        className="shop-item product d-flex flex-column align-items-center justify-content-center h6 gap-2 p-2">
+                                        <Link to={`/product-detail/${item.id}`} className={"d-flex align-items-center justify-content-center text-decoration-none w-100"} >
+                                            <div
+                                                className={"d-flex flex-column w-100 h-100 text-dark justify-content-between align-items-center"}>
+                                                <img src={item.image} alt="item" width="90%" height="auto"/>
+                                                <h1 className="shop-item-title">{item.title}</h1>
+                                                <p className="shop-item-price">${item.price}</p>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                ))}
                             </div>
 
                         </div>
@@ -147,15 +95,18 @@ function Shop(props) {
                             <p>Next</p>
                         </div>
                     </div>
-                    <div className="shop-item-container-right d-flex flex-column align-items-center justify-content-center w-25 gap-5">
+                    <div
+                        className="shop-item-container-right d-flex flex-column align-items-center justify-content-center w-25 gap-5">
                         <div className="items-filter-search position-relative">
                             <label htmlFor="search-bar">
                                 <input type="text" id={"search-bar"} placeholder={"Search"}/>
                                 <img src={searchIcon} alt="search-icon"/>
                             </label>
                         </div>
-                        <div className="shop-search-filters d-flex flex-column align-items-start justify-content-center gap-4">
-                            <div className="shop-categories d-flex flex-column align-items-start justify-content-center w-100">
+                        <div
+                            className="shop-search-filters d-flex flex-column align-items-start justify-content-center gap-4">
+                            <div
+                                className="shop-categories d-flex flex-column align-items-start justify-content-center w-100">
                                 <h1 className={"filter-header d-flex fs-4"}>CATEGORIES</h1>
                                 <hr className={"filter-border"}/>
                                 <p className={"filter-item"}>All</p>
@@ -164,22 +115,25 @@ function Shop(props) {
                                 <p className={"filter-item"}>Tables</p>
                                 <p className={"filter-item"}>Watches</p>
                             </div>
-                            <div className="shop-tags d-flex flex-column align-items-start justify-content-center w-100">
+                            <div
+                                className="shop-tags d-flex flex-column align-items-start justify-content-center w-100">
                                 <h1 className={"filter-header d-flex fs-4"}>TAGS</h1>
                                 <hr className={"filter-border"}/>
-                                <p className={"filter-item"}>White</p>
-                                <p className={"filter-item"}>Chip</p>
-                                <p className={"filter-item"}>Mobile</p>
-                                <p className={"filter-item"}>Modern</p>
+                                <p className={"filter-item"} onClick={() => setSelectedTagRange('white')}>White</p>
+                                <p className={"filter-item"} onClick={() => setSelectedTagRange('chip')}>Chip</p>
+                                <p className={"filter-item"} onClick={() => setSelectedTagRange('mobile')}>Mobile</p>
+                                <p className={"filter-item"} onClick={() => setSelectedTagRange('modern')}>Modern</p>
                             </div>
-                            <div className="shop-brands d-flex flex-column align-items-start justify-content-center w-100">
+                            <div
+                                className="shop-brands d-flex flex-column align-items-start justify-content-center w-100">
                                 <h1 className={"filter-header d-flex fs-4"}>BRANDS</h1>
                                 <hr className={"filter-border"}/>
                                 <p className={"filter-item"}>Apple</p>
                                 <p className={"filter-item"}>Samsung</p>
                                 <p className={"filter-item"}>Green</p>
                             </div>
-                            <div className="filter-by-price d-flex flex-column align-items-start justify-content-center w-100">
+                            <div
+                                className="filter-by-price d-flex flex-column align-items-start justify-content-center w-100">
                                 <h1 className={"filter-header d-flex fs-4"}>FILTER BY PRICE</h1>
                                 <hr className={"filter-border"}/>
                                 <p className={"filter-item"}>Less than $10</p>

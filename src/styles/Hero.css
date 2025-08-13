@@ -2,6 +2,7 @@
     width: 100vw;
     height: auto;
     background-color: rgba(0, 0, 0, 0.1);
+    padding-bottom: 50px;
 }
 .hero-image {
     display: flex;
@@ -46,4 +47,7 @@
 .btn img {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
+}
+.hero-carousel::-webkit-scrollbar {
+    display: none;
 }

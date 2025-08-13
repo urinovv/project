@@ -1,10 +1,11 @@
 import './App.css';
 import AppNavbar from "./components/AppNavbar";
 import HomeScreen from "./screens/HomeScreen";
+import Login from "./screens/Login";
 import About from "./screens/About";
 import Shop from "./screens/Shop";
 import {Routes, Route} from "react-router-dom";
-import PruductPage from "./screens/PruductPage";
+import ProductPage from "./Products/ProductDetail";
 import Blogs from "./screens/Blogs";
 import Contact from "./screens/Contact";
 import BlogPost1 from "./screen-components/BlogPost1";
@@ -18,16 +19,26 @@ import BlogPost8 from "./screen-components/BlogPost8";
 import BlogPost9 from "./screen-components/BlogPost9";
 import Checkout from "./screens/Checkout";
 import Cart from "./screens/Cart";
+import Register from "./screens/Register";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Favourites from "./screens/Favourites";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 function App() {
     return (
         <div className="app">
             <AppNavbar/>
+            <ScrollToTop/>
+            <ScrollToTopBtn/>
             <Routes>
+                <Route path="login" element={<Login />} />
+                <Route path="register" element={<Register />} />
                 <Route index element={<HomeScreen />} />
                 <Route path="about" element={<About />} />
                 <Route path="shop" element={<Shop/>}/>
-                <Route path="pruduct-page" element={<PruductPage/>} />
+                <Route path="/product-detail/:id" element={<ProductPage/>} />
                 <Route path="blogs" element={<Blogs />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path={"blogs/5 Must-Have Gadgets for the Modern Home"} element={<BlogPost1/>}/>
@@ -41,11 +52,18 @@ function App() {
                 <Route path={"blogs/Eco-Friendly Innovations Making a Difference(2)"} element={<BlogPost9/>}/>
                 <Route path={"checkout"} element={<Checkout />}/>
                 <Route path={"cart"} element={<Cart />}/>
-
-
-                    {/*<Route path="login" element={<Login />} />*/}
-                    {/*<Route path="register" element={<Register />} />*/}
+                <Route path={"favourites"} element={<Favourites />}/>
             </Routes>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="colored"
+            />
         </div>
     );
 }

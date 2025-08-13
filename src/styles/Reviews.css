@@ -21,8 +21,71 @@
 }
 .horizontal-line {
     margin: 0;
-    width: 75%;
+    width: auto;
 }
 .star-reviews {
     cursor: pointer;
+}
+
+
+.reviews-section {
+    padding: 50px 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.reviews-wrapper {
+    max-width: 1300px;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 2;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+.reviews-track {
+    display: flex;
+    gap: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.review-card {
+    width: 400px;
+    min-height: 260px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    color: #000;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.stars {
+    margin: 10px 0;
+}
+
+.reviewer-name {
+    margin: 0;
+    font-size: 16px;
+}
+.title-line {
+    width: 90%;
 }

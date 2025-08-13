@@ -8,8 +8,15 @@
     height: auto;
     width: 100vw;
     overflow: hidden;
-    bacground: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.01);
+    position: relative;
 }
 * {
     font-family: 'Nunito', sans-serif;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+p {
+    font-family: 'Nunito', serif;
+    font-style: italic;
 }

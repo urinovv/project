@@ -14,12 +14,11 @@ hr {
     width: 190px;
     height: 230px;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .c-items:hover {
     cursor: pointer;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: 0.5s;
     border: none;
 }
