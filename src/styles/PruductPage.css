@@ -1,12 +1,13 @@
 .pruduct-page {
     width: 100vw;
     height: auto;
+    padding-top: 100px;
 }
 .pruduct-page-container {
     width: 100%;
     margin: auto;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: transparent;
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -14,25 +15,22 @@
     width: 90%;
     height: auto;
 }
-.image-left img {
-    padding: 1rem;
-    width: 100px;
-    height: auto;
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    border-radius: 1rem;
-    cursor: pointer;
-}
 .image-right img {
     padding: 1rem;
     cursor: pointer;
 }
-.image-left img:hover {
-    border-color: orange;
-}
 .image-right {
-    width: 80%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
+    cursor: pointer;
+}
+.image-right:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    scale: 1.01;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease;
 }
 .image-right img:hover {
     scale: 1.01;

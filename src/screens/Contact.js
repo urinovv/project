@@ -2,11 +2,11 @@ import React from 'react';
 import '../styles/Contact.css';
 import contactImg from '../assets/images/Contact Img.png';
 import {NavLink} from "react-router-dom";
-import Reviews from '../components/Reviews';
-import LatestPosts from "../components/LatestPosts";
-import Brands from "../components/Brands";
-import InstaShoplite from "../components/InstaShoplite";
-import Footer from "../components/Footer";
+import Reviews from '../components/Reviews.js';
+import LatestPosts from "../components/LatestPosts.js";
+import Brands from "../components/Brands.js";
+import InstaShoplite from "../components/InstaShoplite.js";
+import Footer from "../components/Footer.js";
 
 function Contact(props) {
     return (

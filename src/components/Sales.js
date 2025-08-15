@@ -42,7 +42,7 @@ function Sales() {
 
     return (
         <section className="sales d-flex flex-column align-items-center justify-content-center">
-            <div className="sales-container d-flex flex-row align-items-center justify-content-center">
+            <div className="sales-container d-flex flex-row align-items-center justify-content-center pt-5 pb-5">
                 <div className="sales-img-container d-flex align-items-center justify-content-center w-50 h-100">
                     <img src={salesImg} alt="salesImg" width="500px" height="400px" />
                 </div>

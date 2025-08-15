@@ -1,11 +1,12 @@
 .blog-post {
     width: 100vw;
     height: auto;
+    padding-top: 100px;
 }
 .blog-post-container {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: transparent;
     padding-top: 80px;
 }
 .blog-post-container img {
@@ -35,4 +36,9 @@
     border-radius: 0.6rem;
     outline: none;
     background-color: transparent;
+}
+textarea {
+    resize: none;
+    background-color: transparent;
+    outline: none;
 }

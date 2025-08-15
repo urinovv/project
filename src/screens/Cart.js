@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import '../styles/Cart.css';
 import {NavLink, Link} from "react-router-dom";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import Reviews from '../components/Reviews';
-import LatestPosts from "../components/LatestPosts";
-import Brands from "../components/Brands";
-import InstaShoplite from "../components/InstaShoplite";
-import Footer from "../components/Footer";
-import useShopStore from "../services/store/UseShopStore";
+import Reviews from '../components/Reviews.js';
+import LatestPosts from "../components/LatestPosts.js";
+import Brands from "../components/Brands.js";
+import InstaShoplite from "../components/InstaShoplite.js";
+import Footer from "../components/Footer.js";
+import useShopStore from "../services/store/UseShopStore.js";
 
 function Cart() {
     const unitPrice = 2000;
@@ -128,7 +128,6 @@ function Cart() {
                         </div>
                         <hr className="w-100 m-0"/>
                         <div className="cart-btns d-flex flex-row align-items-center justify-content-start w-100 gap-3">
-                            <button className="btn btn-warning w-25 p-2 text-white">Update cart</button>
                             <button className="btn btn-warning w-25 p-2 text-white">Continue shipping</button>
                             <Link to={`/checkout`} className={"text-decoration-none text-dark d-flex w-100"}>
                                 <button className="btn btn-warning w-25 p-2 text-white">Proceed to checkout</button>

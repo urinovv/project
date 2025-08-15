@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import '../styles/Hero.css';
 import heroImage from '../assets/images/IMG.png';
-import leftArrow from '../assets/icons/left arrow.svg';
-import rightArrow from '../assets/icons/right arrow.svg';
 import freeDelivery from '../assets/icons/shop-1.svg';
 import qualityGuarantee from '../assets/icons/quality.svg';
 import dailyOffers from '../assets/icons/offers.svg';
 import securePayment from '../assets/icons/success.svg';
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const slides = [
     {
@@ -54,18 +54,30 @@ function HomeScreen(props) {
 
     return (
         <section className="app-hero d-flex flex-column justify-content-center align-items-center position-relative">
-            <div className="hero-container d-flex flex-row align-items-center justify-content-center gap-5">
-                <button className="btn" onClick={() => { stopAutoplay(); prevSlide(); startAutoplay(); }}>
-                    <img src={leftArrow} alt="left"/>
+            <div className="hero-container d-flex flex-row align-items-center justify-content-center">
+                <button className="btn" onClick={() => {
+                    stopAutoplay();
+                    prevSlide();
+                    startAutoplay();
+                }}>
+                    <ArrowBackIosIcon className={"arrow"}/>
                 </button>
-                <div className="hero-left d-flex flex-column align-items-start justify-content-center gap-1">
-                    <h1 className="hero-title fs-0">{slides[currentIndex].title}</h1>
-                    <p className="hero-description fs-5">{slides[currentIndex].description}</p>
-                    <NavLink to={`/shop`} className="hero-btn btn btn-warning text-white">SHOP COLLECTION</NavLink>
+                <div className="hero-body d-flex flex-row align-items-center justify-content-center gap-5 w-75">
+                    <div className="hero-left d-flex flex-column align-items-start justify-content-center gap-1 w-50">
+                        <h1 className="hero-title fs-0">{slides[currentIndex].title}</h1>
+                        <p className="hero-description fs-5">{slides[currentIndex].description}</p>
+                        <NavLink to={`/shop`} className="hero-btn btn btn-warning text-white w-auto">SHOP
+                            COLLECTION</NavLink>
+                    </div>
+                    <img src={slides[currentIndex].image} className="hero-image"
+                         alt="img"/>
                 </div>
-                <img src={slides[currentIndex].image} className="hero-image" width="600px" height="580px" alt="img"/>
-                <button className="btn" onClick={() => { stopAutoplay(); nextSlide(); startAutoplay(); }}>
-                    <img src={rightArrow} alt="right"/>
+                <button className="btn" onClick={() => {
+                    stopAutoplay();
+                    nextSlide();
+                    startAutoplay();
+                }}>
+                    <ArrowForwardIosIcon className={"arrow"}/>
                 </button>
             </div>
 

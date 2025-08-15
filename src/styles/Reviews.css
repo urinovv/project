@@ -1,12 +1,15 @@
-.reviews {
-    width: 100vw;
-    height: 70vh;
-    background-color: rgba(0, 0, 0, 0.1);
+.reviewss-section {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 .reviews-container {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 2rem 1.5rem 4rem 1.5rem;
     width: 90%;
+    height: auto;
     border-radius: 1rem;
 }
 .reviews-header {
@@ -27,27 +30,17 @@
     cursor: pointer;
 }
 
-
-.reviews-section {
-    padding: 50px 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.1);
-}
-
 .reviews-wrapper {
     max-width: 1300px;
 }
 
 .arrow {
-    width: 40px;
-    height: 40px;
     background: transparent;
-    padding: 8px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s ease;
     z-index: 2;
+    scale: 1.5;
+    color: #ffc107;
 }
 
 .arrow:hover {

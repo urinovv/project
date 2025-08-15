@@ -1,7 +1,9 @@
 .latest-posts {
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 100vw;
-    height: 100vh;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 .latest-container {
     width: 90%;

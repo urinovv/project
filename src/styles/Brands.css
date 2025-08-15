@@ -1,7 +1,9 @@
 .brands {
-    width: 100vw;
-    height: 50vh;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 .brands-container {
     width: 90%;

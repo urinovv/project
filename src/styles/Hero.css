@@ -1,7 +1,8 @@
 .app-hero {
-    width: 100vw;
+    width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    padding-top: 100px;
     padding-bottom: 50px;
 }
 .hero-image {
@@ -10,6 +11,8 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    width: 50%;
+    height: auto;
 }
 .hero-description-container {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -44,10 +47,13 @@
     flex-direction: column;
     gap: 10px;
 }
-.btn img {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 10px;
+.btn {
+    width: 12.5%;
 }
 .hero-carousel::-webkit-scrollbar {
     display: none;
+}
+.arrow {
+    border: none;
+
 }

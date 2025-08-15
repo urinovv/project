@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Favourites.css';
 import { NavLink, Link } from "react-router-dom";
 import { FaHeart, FaTrash } from "react-icons/fa";
-import useShopStore from "../services/store/UseShopStore";
+import useShopStore from "../services/store/UseShopStore.js";
 
 function Favourites() {
     const favourites = useShopStore(state => state.favourites);

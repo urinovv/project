@@ -1,10 +1,17 @@
 .best-selling {
-    width: 100vw;
-    height: 60vh;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.best-selling-items {
+    width: 90%;
+    height: auto;
 }
 .best-selling-container {
-    width: 90%;
+    width: 100%;
+    height: auto;
 }
 .line {
     display: flex;
@@ -42,13 +49,9 @@
     border: transparent;
     transition: 0.5s;
 }
-.arrows {
+.shop-item {
+    width: 200px;
+    height: 300px;
+    border-radius: 1rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.arrows:active {
-    scale: 0.8;
-    transition: 0.5s;
 }

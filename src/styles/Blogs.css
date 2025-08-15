@@ -1,11 +1,13 @@
 .blogs {
     width: 100vw;
     height: auto;
+    background-color: transparent;
+    padding-top: 100px;
 }
 .blogs-container {
-    width: 100%;
+    width: 90%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.1);
+
     padding-top: 10px;
     padding-bottom: 80px;
 }

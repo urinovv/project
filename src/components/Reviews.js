@@ -3,6 +3,8 @@ import '../styles/Reviews.css';
 import leftArrow from '../assets/icons/left arrow.svg';
 import rightArrow from '../assets/icons/right arrow.svg';
 import StarIcon from '@mui/icons-material/Star';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const reviews = [
     {
@@ -37,36 +39,41 @@ function Reviews() {
     const total = reviews.length;
 
     const next = () => {
-        setIndex((prev) => (prev + visibleCount) % total);
+        if (total > 0) {
+            setIndex((prev) => (prev + visibleCount) % total);
+        }
     };
 
     const prev = () => {
-        setIndex((prev) => (prev - visibleCount + total) % total);
+        if (total > 0) {
+            setIndex((prev) => (prev - visibleCount + total) % total);
+        }
     };
 
-    // ✅ Auto-play effect
+    // ✅ Auto-play effect — faqat review mavjud bo‘lganda ishga tushadi
     useEffect(() => {
-        const interval = setInterval(() => {
-            next();
-        }, 5000); // 5 seconds
-        return () => clearInterval(interval);
-    }, []);
+        if (total === 0) return;
 
-    const visibleReviews = [
-        reviews[(index + 0) % total],
-        reviews[(index + 1) % total],
-        reviews[(index + 2) % total]
-    ];
+        const interval = setInterval(next, 5000); // 5 seconds
+        return () => clearInterval(interval);
+    }, [total]); // total o'zgarsa interval yangilanadi
+
+    // Ko‘rinadigan reviewlar ro‘yxati
+    const visibleReviews = Array.from({ length: visibleCount }, (_, i) =>
+        reviews[(index + i) % total]
+    );
 
     return (
-        <section className="reviews-section d-flex flex-column align-items-center">
+        <section className="reviewss-section d-flex flex-column align-items-center">
             <div className="title-line d-flex align-items-center gap-3 justify-content-center mb-4">
                 <h2 className="fs-3 m-0 w-50 mb-4">CUSTOMERS REVIEWS</h2>
                 <hr className="flex-grow-1" style={{ borderTop: '1px solid #ccc' }} />
             </div>
 
             <div className="reviews-wrapper d-flex flex-row align-items-center justify-content-center gap-4 position-relative">
-                <img src={leftArrow} alt="left" className="arrow" onClick={prev} />
+                <button className="arrow" onClick={prev} >
+                    <ArrowBackIosIcon/>
+                </button>
                 <div className="reviews-track d-flex">
                     {visibleReviews.map((review, i) => (
                         <div key={i} className="review-card d-flex flex-column justify-content-between">
@@ -80,7 +87,9 @@ function Reviews() {
                         </div>
                     ))}
                 </div>
-                <img src={rightArrow} alt="right" className="arrow" onClick={next} />
+                <button className="arrow" onClick={next} >
+                    <ArrowForwardIosIcon/>
+                </button>
             </div>
         </section>
     );

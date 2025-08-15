@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/Checkout.css';
 import {NavLink} from "react-router-dom";
-import Reviews from '../components/Reviews';
-import LatestPosts from "../components/LatestPosts";
-import Brands from "../components/Brands";
-import InstaShoplite from "../components/InstaShoplite";
-import Footer from "../components/Footer";
+import Reviews from '../components/Reviews.js';
+import LatestPosts from "../components/LatestPosts.js";
+import Brands from "../components/Brands.js";
+import InstaShoplite from "../components/InstaShoplite.js";
+import Footer from "../components/Footer.js";
 
 function Checkout(props) {
+
     return (
         <section className="checkout">
             <div className="checkout-container">
@@ -65,12 +66,12 @@ function Checkout(props) {
                             <hr className="cart-totals-divider w-100"/>
                             <div className={"d-flex flex-row align-items-center justify-content-between w-50"}>
                                 <h1 className={"text-uppercase fs-5 fw-light text-warning"}>Subtotal</h1>
-                                <p className={"text-warning"}>$2400.00</p>
+                                <p className={"text-warning"}>${" Subtotal"}</p>
                             </div>
                             <hr className="cart-totals-divider w-100"/>
                             <div className={"d-flex flex-row align-items-center justify-content-between w-50"}>
                                 <h1 className={"text-uppercase fs-5 fw-light text-warning"}>Total</h1>
-                                <p className={"text-warning"}>$2400.00</p>
+                                <p className={"text-warning"}>${" Total"}</p>
                             </div>
                             <hr className="cart-totals-divider w-100"/>
                             <div

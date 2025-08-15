@@ -1,29 +1,29 @@
 import React from 'react';
 import '../styles/ItemsList.css';
 import {Link} from 'react-router-dom';
-import products from "../Products/mockProducts";
+import products from "../Products/mockProducts.js";
 
 function ItemsList(props) {
 
     const featuredProducts = [
-        products[2],
-        products[5],
-        products[8],
+        products[12],
+        products[13],
+        products[14],
     ];
     const latestProducts = [
-        products[9],
-        products[10],
-        products[11],
+        products[15],
+        products[16],
+        products[17],
     ];
     const bestReviewedProducts = [
-        products[4],
-        products[9],
-        products[11],
+        products[18],
+        products[19],
+        products[20],
     ];
     const onSaleProducts = [
-        products[1],
-        products[2],
-        products[7],
+        products[21],
+        products[22],
+        products[23],
     ];
 
     return (

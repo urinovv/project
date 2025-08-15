@@ -1,15 +1,22 @@
 .sales {
-    width: 100vw;
-    height: 80vh;
-    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    background: transparent;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 .sales-container {
-    width: 90vw;
-    height: 70vh;
+    width: 90%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.01);
     border-radius: 15px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
     padding: 10px;
+}
+.sales-container:hover {
+    box-shadow: rgba(149, 157, 165, 0.6) 0 8px 24px;
+    transform: scale(1.01);
+    transition: 0.3s;
 }
 .countdown {
     font-family: Arial, sans-serif;

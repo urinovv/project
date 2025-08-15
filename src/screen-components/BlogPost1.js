@@ -7,12 +7,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import {NavLink} from "react-router-dom";
-import Reviews from '../components/Reviews';
-import LatestPosts from "../components/LatestPosts";
-import InstaShoplite from "../components/InstaShoplite";
-import Brands from "../components/Brands";
-import Footer from "../components/Footer";
-import Comments from '../components/Comments';
+import Reviews from '../components/Reviews.js';
+import LatestPosts from "../components/LatestPosts.js";
+import InstaShoplite from "../components/InstaShoplite.js";
+import Brands from "../components/Brands.js";
+import Footer from "../components/Footer.js";
+import Comments from '../components/Comments.js';
 
 function BlogPost1(props) {
     return (
